@@ -9,12 +9,15 @@
 <div class="card">
     <div class="card-body">
         <h4>Editar Postagem</h4>
-        <form action="/admin/postagens/nova" method="POST">
+        <form action="/admin/postagem/edit" method="POST">
+
+            <input type="hidden" value="{{postagem._id}}" name="id">
+
             <label for="titulo">Titulo</label>
             <input type="text" value="{{postagem.titulo}}" name="titulo" class="form-control">
 
             <label for="slug">Slug</label>
-            <input type="text" value="{{postage.slug}}" name="slug" class="form-control">
+            <input type="text" value="{{postagem.slug}}" name="slug" class="form-control">
 
             <label for="descricao">Descricao</label>
             <input type="text" name="descricao" value="{{postagem.descricao}}" class="form-control">
